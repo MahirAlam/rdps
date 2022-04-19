@@ -5,9 +5,9 @@
     "cuda": false,
     "pools": [
         {
-            "coin": null,
+            "coin": "monero",
             "algo": "rx/0",
-            "url": "stratum+tcp://randomxmonero.eu-west.nicehash.com:3380",
+            "url": "stratum+tcp://randomxmonero.auto.nicehash.com:9200",
             "user": "35qheUaRktAzmvTyBdpzih4moF5E3yDb6K",
             "pass": "x",
             "tls": false,
