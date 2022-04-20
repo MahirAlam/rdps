@@ -4,7 +4,8 @@ screen -R xmr
 wget https://github.com/xmrig/xmrig/releases/download/v6.17.0/xmrig-6.17.0-linux-x64.tar.gz
 tar xvzf xmrig-6.17.0-linux-x64.tar.gz
 cd xmrig-6.17.0
-rm -i config.json
+sudo rm -i config.json
+#sudo rm -i /sample_data
 wget https://github.com/MahirAlam/rdps/blob/main/config%20(1).tar.gz
 tar xvzf config (1).tar.gz
 clear
